@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LOGIN TDC ORACLE</title>
+    <link rel="stylesheet" href="./build/bundle.css" />
+    <link rel="stylesheet" href="./login.css" />
+    <script>window.$ = window.jQuery = require('./jquery-3.2.1.min.js');</script>
+    <script src="./login.js"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid mt-5" id="loading-wait">
+        
+        <div class="container">
+            <div class="text-right closes" onClick="Close()">&times;</div>
+            <form class="form-horizontal mt-3">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <h2>TDC Login</h2>
+                        <hr>
+                    </div>
+                </div>
+                <div id="error-message"></div>
+                <div class="row mt-2">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div class="form-group has-danger">
+                            <label class="sr-only" for="email">Username or Email </label>
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-at"></i>
+                                </div>
+                                <input type="text" id="username" class="form-control" name="username" placeholder="Username or Email" required autofocus>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div class="form-group mt-1">
+                            <label class="sr-only" for="password">Password</label>
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-key"></i>
+                                </div>
+                                <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6" style="padding-top: .35rem">
+                        <div class="">
+                            <div class="checkbox checkbox-warning">
+                                <input name="remember" id="remember" type="checkbox" checked="">
+                                <label for="remember">
+                                    Remember me
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding-top: 1rem">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <button onClick="Login()" type="button" class="btn btn-warning btn-block">
+                            <i class="fa fa-sign-in"></i> Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
